@@ -1,0 +1,43 @@
+//잘못된 토큰 파일입니다.
+
+//<program> ::= "mainprog" id ";" <declarations> <subprogram_declarations>
+mainprog main;
+int a, b, 1.c;
+
+	//<subprogram_declaration> ::= <subprogram_head> <declarations> <compound_statement>
+	function Sum(i:int;j:int):int;		//<subprogram_head> ::= "function" id <arguments> ":" <standard_type> ";" 
+		int result;
+		begin
+			result = i+j;
+			return result		//<statement> ::=  "return" <expression>
+		end
+
+	//<subprogram_declaration> ::= <subprogram_head> <declarations> <compound_statement>	
+	procedure PrintSum(a,b:int);		//<subprogram_head> ::= "procedure" id <arguments> ";" 
+		begin
+			print ( Sum(a,b) )	//<print_statement> ::= "print" "(" <expression> ")" 
+		end
+begin
+	//<statement> ::= <variable> "=" <expression> 
+	a =10;
+	b= 10;
+	c = 10;
+
+	//<for_statement> ::= “for” <expression> “in” <expression> “:” <statement> [“else” “:” <statement>]
+	for a != b in b != c:
+		//<if_statement> ::= “if” <expression> “:” <statement> (“elif” <expression> “:” <statement>)* [“else” “:” <expression>]
+		if a>0:
+			a=a-1
+		elif a==0:
+			//<statement> ::= <compound_statement>
+			begin
+				b = b - 1.0;
+				a = b
+			end
+		elif b==0:
+			c=a*b+0
+		else:
+			PrintSum(a,b)	//<procedure_statement> ::= id "(" <actual_parameter_expression> ")" 
+	else:
+		c=Sum(a,b)
+end

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="중간 코드">
+      <UniqueIdentifier>{f486501d-f7f5-4746-be45-614c5c531a82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 코드">
+      <UniqueIdentifier>{6ad4b745-5a97-4d6c-936b-484a55480af2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="FlexLexer.h">
+      <Filter>중간 코드</Filter>
+    </ClInclude>
+    <ClInclude Include="yacc.tab.h">
+      <Filter>중간 코드</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Flex Include="lex.l">
+      <Filter>소스 코드</Filter>
+    </Flex>
+  </ItemGroup>
+  <ItemGroup>
+    <Bison Include="yacc.y">
+      <Filter>소스 코드</Filter>
+    </Bison>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lex.flex.cpp">
+      <Filter>중간 코드</Filter>
+    </ClCompile>
+    <ClCompile Include="yacc.tab.cpp">
+      <Filter>중간 코드</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
